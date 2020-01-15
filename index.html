@@ -13,6 +13,9 @@
     <!-- Css Stylesheet -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
+    <!-- js script -->
+    <script type="javascript/text" src="script.js"></script>
+
     <title>Random Password Generator</title>
 </head>
 
@@ -34,12 +37,15 @@
                 <br>
                 <input type="text" id="display">
                 <br>
-                <input type="range" min="0" max="50" name="slider" id="slider">
+                <input type="range" min="8" max="128" name="slider" id="slider">
                 <br>
                 <button class="but" onclick="generate()">Generate</button>
                 <button class="but" onclick="copyPassWord()">Copy to Clipboard</button>
+                <div id="length"></div>
                 
                    <!-- making checkboxes for pw options -->
+                   <h5 class="pt-2">Options</h5>
+                   
             <div class="pt-2">
                 <label>Uppercase Letters</label>
                 <input type="checkbox" id="upper" checked>
@@ -60,11 +66,7 @@
                 <input type="checkbox" id="symbols" checked>
             </div>
             
-            </div>
-
-         
-
-
+            <!-- show previous pw's here -->
             <div class="previousPasswords">
                 <b>Previously Generated Passwords</b>
                 <br>
@@ -73,12 +75,20 @@
             </div>
 
 
+            </div>
+
+         
+
+
+        
+
 
         </div>
 
 
 
         <!-- Optional JavaScript -->
+        <script type="javascript/text" src="script.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

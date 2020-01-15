@@ -1,0 +1,32 @@
+.generator {
+    margin-top: 10px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    width:100%
+    
+}
+
+.but {
+background-color: white;
+color: purple;
+}
+
+#display {
+    width: 100%;
+}
+
+#slider {
+    width: 100%;
+}
+
+.previousPasswords {
+    margin-bottom: 20px;
+}
+
+.navbar     {
+    background-color: purple;
+    color: white;
+}
