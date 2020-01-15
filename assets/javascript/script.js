@@ -7,7 +7,7 @@ var lowercaseEl = document.getElementById("lowercase");
 var numbersEl = document.getElementById("numbers");
 var symbolsEl = document.getElementById("symbols");
 var generateEl = document.getElementById("generate");
-var clipEl = document.getElementById("clipboard");
+var clipboardEl = document.getElementById("clipboard");
 
 
 // object containing our functions
@@ -17,6 +17,69 @@ var randomFunc = {
     number: getRandomNumber,
     symbol: getRandomSymbol
 };
+// creates event that watches for click on button, then see what option boxes are checked then passes result into the password bar
+generateEl.addEventListener("click", () => {
+    var length = +lengthEl.Value;
+    var hasLower = lowercaseEl.checked;
+    var hasUpper = uppercaseEl.checked;
+    var hasNumber = numberEl.checked;
+    var hasSymbol = symbolsEl.checked;
+
+    resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymobl, length);
+});
+
+//copy to clipboard
+clipboardEl.addEventListener(click, () => {
+
+    var textarea = document.createElement('textarea');
+    var password = resultEl.innerText;
+
+    // if empty return nothing
+    if(!password) {
+        return;
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    alert('Password copied to clipboard!');
+})
+
+
+//generate password function
+
+function generatePassword(lower, upper, number, symbol, length) {
+    // 1. Init pw var
+    // 2. filter out unchecked types
+    // 3. loop over length call generator function for each type
+    // 4. Add final pw to the pw var and return 
+
+    let generatedPassword = '';
+    // counts number of checked values
+    var typesCount = lower + upper + number + symbol;
+
+    var typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(item => Object.values(item)[0]);
+
+    // if nothing checked return ""
+    if(typesCount === 0){
+        return '';
+    }
+
+    for(let i = 0; i < length; i += typesCount) {
+        typesArr.forEach(type => {
+            var funcName = Object.keys(type)[0];
+
+            generatedPassword += randomFunc[funcName]();
+        });
+    }
+//  allows for 1 lenght passwords even if all 4 options are checked
+    var finalPassword = generatedPassword.slice(0, length);
+
+    return finalPassword;
+
+}
 
 
 // functions for  generator - http://www.net-comber.com/charset.html (list of charater st codes)
