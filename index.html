@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <!-- Css Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
     <title>Random Password Generator</title>
 </head>
 
@@ -35,7 +38,32 @@
                 <br>
                 <button class="but" onclick="generate()">Generate</button>
                 <button class="but" onclick="copyPassWord()">Copy to Clipboard</button>
+                
+                   <!-- making checkboxes for pw options -->
+            <div class="pt-2">
+                <label>Uppercase Letters</label>
+                <input type="checkbox" id="upper" checked>
             </div>
+
+            <div class="p-1">
+                <label>Lowercase Letters</label>
+                <input type="checkbox" id="lower" checked>
+            </div>
+
+            <div class="p-1">
+                <label>Numbers</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+
+            <div class="p-1">
+                <label>Symbols</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+            
+            </div>
+
+         
+
 
             <div class="previousPasswords">
                 <b>Previously Generated Passwords</b>
