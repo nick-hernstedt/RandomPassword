@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    top navbar (title)
+    <!-- top navbar (title) -->
     <nav class="navbar">
         <span class="navbar-brand mb-0 h1">Random Password Generator</span>
     </nav>
@@ -35,13 +35,13 @@
             <div class="col">
                 <h4>Random Password Generator</h4>
                 <br>
-                <input type="text" id="display">
+                <input type="text" id="result">
                 <br>
-                <input type="range" min="8" max="128" name="slider" id="length">
+                <input type="number" min="8" max="128" id="length" value="28">
                 <br>
-                <button class="but" onclick="generate()">Generate</button>
-                <button class="but" onclick="clipboard()">Copy to Clipboard</button>
-                <div id="length"></div>
+                <button class="but" id="generate">Generate</button>
+                <button class="but" id="clipboard">Copy to Clipboard</button>
+              
                 
                    <!-- making checkboxes for pw options -->
                    <h5 class="pt-2">Options</h5>
@@ -66,15 +66,7 @@
                 <input type="checkbox" id="symbols" checked>
             </div>
             
-            <!-- show previous pw's here -->
-            <div class="previousPasswords">
-                <b>Previously Generated Passwords</b>
-                <br>
-                <div id="lastNumbs"></div>
-
-            </div>
-
-
+      
             </div>
 
          
