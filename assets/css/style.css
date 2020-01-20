@@ -61,7 +61,7 @@ color: white;
 
 .icons {
     text-align: center;
-    color: white;
+    color: white !important;
     padding-top: 30px;
 }
 
