@@ -10,37 +10,51 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+        <!-- Google fonts link -->
+        <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
+
     <!-- Css Stylesheet -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
     <!-- js script -->
     <script type="javascript/text" src="./assets/javascript/script.js"></script>
+
+    
 
     <title>Random Password Generator</title>
 </head>
 
 <body>
-    <!-- top navbar (title) -->
-    <nav class="navbar">
-        <span class="navbar-brand mb-0 h1">Random Password Generator</span>
-    </nav>
+
+<div class="bg">
+
 
     <!-- main container -->
-    <div class="container">
+    <div class="container" >
 
-        <!-- row 1 -->
-        <div class="row">
+        <div class="row pt-5 pb-5 mb-5">
+
+
+        </div>
+
+     <div class="cont1">
+        <div class="row pt-3" id="mainBox" >
 
             <!-- row 1 column 1 (contains password generator) -->
-            <div class="col">
-                <h4>Random Password Generator</h4>
-                <br>
-                <span type="text" id="result"></span>
+            <div class="col text-center">
+                <h2>Random Password Generator</h2>
+            
+                <span type="text" id="result" style="background-color:#0A84D0" class="m-5"></span>
                 <br>
                 <input type="number" min="8" max="128" id="length" value="28">
-                <br>
-                <button class="but" id="generate">Generate</button>
-                <button class="but" id="clipboard">Copy to Clipboard</button>
+            <br/>
+            
+                <button class="btn mt-2" id="generate">Generate</button>
+                <button class="btn mt-2" id="clipboard">Copy to Clipboard</button>
               
                 
                    <!-- making checkboxes for pw options -->
@@ -68,16 +82,21 @@
             
       
             </div>
-
-         
-
+     </div>
 
         
+    </div>
+
+   
+</div>
+
+        <div class="icons">
+            <i class="fab fa-instagram fa-3x icon"></i> 
+            <i class="fab fa-linkedin-in fa-3x icon"></i>
+            <i class="fab fa-twitter fa-3x icon"></i>
 
 
         </div>
-
-
 
         <!-- Optional JavaScript -->
        

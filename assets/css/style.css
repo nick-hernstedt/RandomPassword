@@ -1,3 +1,23 @@
+body, html {
+    height: 100%;
+    
+}
+
+.bg {
+    background-image: url(https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?cs=srgb&dl=agriculture-clouds-countryside-cropland-440731.jpg&fm=jpg);
+    min-height: 100%;
+    max-height: 150%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+
+h2 {
+    font-family: 'Special Elite', cursive;
+}
+
+
 .generator {
     margin-top: 10px;
     border-radius: 10%;
@@ -9,9 +29,9 @@
     
 }
 
-.but {
-background-color: white;
-color: purple;
+.btn {
+background-color: #568810;
+color: white;
 }
 
 #display {
@@ -25,8 +45,27 @@ color: purple;
 .previousPasswords {
     margin-bottom: 20px;
 }
+#mainBox {  
+   color: white;
+    background: rgba(175, 212, 236, 0.3)
+}
 
-.navbar     {
-    background-color: purple;
+#result {
+    background-color: none;
+    font-size: 20px;
+}
+
+.form {
+    margin-bottom: 100px !important;
+}
+
+.icons {
+    text-align: center;
     color: white;
+    padding-top: 30px;
+}
+
+.icon {
+    margin-right: 10px;
+    margin-left: 10px;
 }
