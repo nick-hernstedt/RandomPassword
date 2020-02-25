@@ -2,12 +2,14 @@
 A random password generator
 ## Site URL
 https://nick-hernstedt.github.io/RandomPassword/
-![Picture of site](./assets/images/password.png)
+
 ## What it is
 This is a random password generator. It does the following:
 - allows user to choose from different complexity options
 - generates a random password based off of user selections
 - provides ability to copy generated password to clipboard
+##
+![Picture of site](./assets/images/password.png)
 
 
 ## Technologies
